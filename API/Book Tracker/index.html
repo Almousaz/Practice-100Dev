@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Book Tracker</h1>
+    <label for="bookTitle">Enter Book ISBN:</label>
+    <input
+      type="text"
+      id="bookTitle"
+      placeholder="Type the book title here..."
+    />
+    <button type="button" id="getBookButton">Get Book Info</button>
+    <button id="resetButton">Reset</button>
+
+    <h2>Book Details</h2>
+    <h4 id="bookType">Type:</h4>
+    <img src="./img/tracker.jpg" alt="Book Cover" id="bookCover" />
+    <iframe id="bookInfo" src="" frameborder="0"></iframe>
+
+    <script src="app.js"></script>
+  </body>
+</html>
