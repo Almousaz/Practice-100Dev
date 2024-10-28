@@ -1,0 +1,65 @@
+/* Reset some default styles */
+body, h1, h2, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4CAF50; /* Green color */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #555; /* Darker gray */
+}
+
+/* Input field styles */
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 5px;
+    width: 300px; /* Fixed width for the input */
+    margin-bottom: 20px; /* Space below the input */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 80%; /* Make input responsive */
+    }
+}

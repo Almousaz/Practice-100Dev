@@ -1,0 +1,94 @@
+/* Reset some default styles */
+body, h1, h2, input, button, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #001f3f; /* Dark navy background representing space */
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 1.5em;
+    color: #ffcc00; /* Bright yellow color for NASA theme */
+}
+
+h2 {
+    font-size: .5rem;
+    color: #ffffff; /* White color for subheading */
+}
+h3{
+    font-size: 1rem;
+    color: #ffffff; /* White color for subheading */
+}
+
+
+/* Input field styles */
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ffcc00; /* Yellow border */
+    border-radius: 5px;
+    width: 300px; /* Fixed width for the input */
+    margin-bottom: 20px; /* Space below the input */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ffcc00; /* Yellow background */
+    color: #001f3f; /* Dark navy text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #ffd700; /* Slightly darker yellow on hover */
+}
+
+#logo {
+    display: block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Image styles */
+img {
+    margin-top: 20px; /* Space above the image */
+    max-width: 500px; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+}
+iframe {
+    width: 500px;
+    height: 500px;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 80%; /* Make input responsive */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller heading on mobile */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Smaller subheading on mobile */
+    }
+}
