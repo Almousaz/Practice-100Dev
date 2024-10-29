@@ -1,0 +1,69 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+}
+
+h2 {
+    color: #333; /* Dark gray color for headings */
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Font size for button text */
+    margin: 20px; /* Margin around the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+h3 {
+    margin: 20px 0 10px; /* Spacing for player headings */
+    color: #555; /* Medium gray for player headings */
+}
+
+img {
+    width: 100px; /* Set a fixed width for card images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Margin around card images */
+}
+
+h4 {
+    margin-top: 20px; /* Margin above result text */
+    font-weight: bold; /* Bold text for result */
+    font-size: 20px; /* Larger font size for result */
+    color: #333; /* Dark gray color for result */
+}
+
+/* Additional styles for reset button */
+#resetButton {
+    padding: 10px 20px; /* Padding for reset button */
+    font-size: 16px; /* Font size for reset button */
+    margin: 20px; /* Margin around the reset button */
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #f44336; /* Red background for reset */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+#resetButton:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
