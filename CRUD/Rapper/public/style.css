@@ -1,3 +1,79 @@
-/* h1{
-    color: red;
-} */
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #555;
+}
+
+ul.rappers {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rapper {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.rapper:hover {
+    background-color: #f0f0f0;
+}
+
+.rapper span {
+    margin: 0 10px;
+}
+
+.fa {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.fa:hover {
+    color: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
