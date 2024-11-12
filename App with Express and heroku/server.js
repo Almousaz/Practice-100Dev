@@ -4,19 +4,19 @@ const PORT = 6000;
 
 const rappers = {
   "21 savage": {
-    age: 29,
-    birthName: "Sheya Bin Abraham - Joseph",
-    birthLocation: "England",
+    'age': 29,
+    'birthName': "Sheya Bin Abraham - Joseph",
+    'birthLocation': "England",
   },
   "chance the rapper": {
-    age: 25,
-    birthName: "Chancelor Bennet",
-    birthLocation: "Chicago",
+    'age': 25,
+    'birthName': "Chancelor Bennet",
+    'birthLocation': "Chicago",
   },
-  unknown: {
-    age: 0,
-    birthName: "unknown",
-    birthLocation: "unknown",
+  'unknown': {
+    'age': 0,
+    'birthName': "unknown",
+    'birthLocation': "unknown",
   },
 };
 
