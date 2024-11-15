@@ -1,0 +1,91 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Main heading style */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Subheading style */
+h2 {
+    margin-top: 20px;
+    color: #34495e;
+}
+
+/* Style for the movie list */
+.movies {
+    list-style-type: none;
+    padding: 0;
+}
+
+.movie {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the movie title and director */
+.movie span {
+    margin-right: 10px;
+}
+
+/* Style for the thumbs up and trash icons */
+.fa-thumbs-up, .fa-trash {
+    cursor: pointer;
+    color: #2980b9;
+    transition: color 0.3s;
+}
+
+.fa-thumbs-up:hover, .fa-trash:hover {
+    color: #3498db; /* Change color on hover */
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: #3498db; /* Change background on hover */
+}
