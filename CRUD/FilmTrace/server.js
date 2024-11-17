@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const MongoClient = require("mongodb").MongoClient;
-const PORT = 7700;
+// const mongoose = require("mongoose");
+const PORT = 7600;
 require("dotenv").config();
 
 let db,
@@ -16,6 +17,19 @@ let db,
   .catch((error) => {
     console.error("Failed to connect to the database:", error);
   });
+
+
+  // mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
+  // .then(() => {
+  //   console.log("Connected to DB !");
+  // })
+  // .catch(err => {
+  //   console.error("Database connection error:", err);
+  // });
+
+
+
+
 
 
 app.set("view engine", "ejs");
@@ -74,6 +88,36 @@ app.put("/addOneLike", (request, response) => {
     .catch((error) => console.error(error));
 });
 
+// app.put("/addOneLike", (request, response) => {
+//   const { titleS, directorS, likesS } = request.body;
+
+//   // Check if the user has already liked the movie (pseudo-code)
+//   const userId = request.user.id; // Assuming you have user authentication
+//   db.collection("likes").findOne({ userId, title: titleS, director: directorS })
+//       .then(existingLike => {
+//           if (existingLike) {
+//               return response.json("You have already liked this movie.");
+//           }
+
+//           // If not liked, update the movie's like count
+//           return db.collection("movies").updateOne(
+//               { title: titleS, director: directorS },
+//               { $set: { likes: likesS + 1 } }
+//           );
+//       })
+//       .then(() => {
+//           console.log("Added One Like");
+//           response.json("Like Added");
+//       })
+//       .catch(error => {
+//           console.error(error);
+//           response.status(500).json("Error updating like count");
+//       });
+// });
+
+
+
+
 app.delete("/deleteMovie", (request, response) => {
   // Updated route
   db.collection("movies") // Updated collection name
@@ -84,6 +128,9 @@ app.delete("/deleteMovie", (request, response) => {
     })
     .catch((error) => console.error(error));
 });
+
+
+
 
 app.listen(process.env.PORT || PORT, () => {
   console.log(`Server running on port ${PORT}`);
