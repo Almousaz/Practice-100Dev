@@ -62,45 +62,60 @@ app.post("/", async (req, res) => {
 // EDIT or UPDATE METHODE
 
 app
-    .route("/edit/:id")
-    .get(async (req, res) => {
-        const id = req.params.id;
-        try {
-            const tasks = await TodoTask.find({});
-            res.render("edit.ejs", { todoTasks: tasks, idTask: id });
-        } catch (err) {
-            res.status(500).send(err);
-        }
-    })
-    .post(async (req, res) => {
-        const id = req.params.id;
-        const { title, content } = req.body;
+  .route("/edit/:id")
+  .get(async (req, res) => {
+    const id = req.params.id;
+    try {
+      const tasks = await TodoTask.find({});
+      res.render("edit.ejs", { todoTasks: tasks, idTask: id });
+    } catch (err) {
+      res.status(500).send(err);
+    }
+  })
+  .post(async (req, res) => {
+    const id = req.params.id;
+    const { title, content } = req.body;
 
-        // Basic validation
-        if (!title || !content) {
-            return res.status(400).send("Title and content are required.");
-        }
+    // Basic validation
+    if (!title || !content) {
+      return res.status(400).send("Title and content are required.");
+    }
 
-        try {
-            const updatedTask = await TodoTask.findByIdAndUpdate(
-                id,
-                { title, content },
-                { new: true } // Return the updated document
-            );
+    try {
+      const updatedTask = await TodoTask.findByIdAndUpdate(
+        id,
+        { title, content },
+        { new: true } // Return the updated document
+      );
 
-            if (!updatedTask) {
-                return res.status(404).send("Task not found.");
-            }
+      if (!updatedTask) {
+        return res.status(404).send("Task not found.");
+      }
 
-            res.redirect("/");
-        } catch (err) {
-            res.status(500).send(err);
-        }
-    });
+      res.redirect("/");
+    } catch (err) {
+      res.status(500).send(err);
+    }
+  });
 
+//DELETE
 
+app.route("/remove/:id").get(async (req, res) => {
+  const id = req.params.id;
+  // console.log(id)
 
+  try {
+    const deletedTask = await TodoTask.findByIdAndDelete(id);
 
+    if (!deletedTask) {
+      return res.status(404).send("Task not found.");
+    }
+
+    res.redirect("/");
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
