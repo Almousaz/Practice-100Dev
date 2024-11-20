@@ -1,0 +1,114 @@
+/* 
+h1{
+    color: red;
+}
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+.not{
+    text-decoration: underline;
+} */
+
+
+/* style.css */
+
+/* Reset some default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Style for the main heading */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Style for the subheading */
+h2 {
+    color: #666;
+}
+
+/* Style for the link to create a new todo list */
+a {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the todo list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.todoItem:hover {
+    background-color: #f9f9f9;
+}
+
+/* Style for completed and not completed items */
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.not {
+    color: #333;
+}
+
+/* Style for the delete button */
+.del {
+    cursor: pointer;
+    color: red;
+}
+
+/* Style for the form */
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
