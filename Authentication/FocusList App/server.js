@@ -1,15 +1,20 @@
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
+const connectDB = require('./config/database')
+const mainRoutes = require('./routes/main')
+
+
 
 require('dotenv').config({path: './config/.env'})
 
 
+connectDB()
 
 
 
 
-
-
+app.use('/', mainRoutes)
 
 
 
