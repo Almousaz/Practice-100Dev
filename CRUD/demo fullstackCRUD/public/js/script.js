@@ -1,3 +1,5 @@
+
+//  Control image Carousel
 function startCarousel() {
     let activeImage = 0;
     const images = document.querySelectorAll("#carousel img");
@@ -45,7 +47,7 @@ function startCarousel() {
   
   async function deleteItem(id) {
     try {
-      const response = await fetch(`http://localhost:3000/item/delete/${id}`, {
+      const response = await fetch(`http://localhost:7171/item/delete/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {
