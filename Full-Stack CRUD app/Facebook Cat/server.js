@@ -21,5 +21,9 @@ app.set('view engine', 'ejs');
 
 
 
+//  connect to mongo db before start the  server
+mongoose.connection.once('open', () => {
+    console.log('Connected to MongoDB')
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+  })
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
