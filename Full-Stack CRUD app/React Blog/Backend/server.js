@@ -23,8 +23,32 @@ mongoose.connect(process.env.MONGO_URI) //Add your database credentials here!
       content: String
   });
 
+  const Post = mongoose.model('Post', postSchema);
  
   
+
+
+  app.get('/posts', async (req, res) => {
+    const posts = await Post.find();
+    res.send(posts);
+});
+
+app.get('/posts/:id', async (req, res) => {
+    const post = await Post.findById(req.params.id);
+    res.send(post);
+});
+
+app.post('/posts', async (req, res) => {
+    const newPost = new Post(req.body);
+    const savedPost = await newPost.save();
+    res.send(savedPost);
+});
+
+app.delete('/posts/:id', async (req, res) => {
+    await Post.findByIdAndDelete(req.params.id);
+    res.status(200).send('Post deleted');
+});
+
 
 
 
